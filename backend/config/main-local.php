@@ -20,6 +20,10 @@ if (!YII_ENV_TEST) {
     $config['modules']['gii'] = [
         'class' => 'yii\gii\Module',
     ];
+
+    $config['modules']['admin'] = [
+        'class' => 'backend\modules\admin',
+    ];
 }
 
 return $config;
