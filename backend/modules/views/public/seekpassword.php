@@ -39,24 +39,24 @@ use yii\helpers\Html;
     <a class="brand" href="index.html"></a>
 
     <?php $form = ActiveForm::begin([
-            'fieldConfig' => [
-                    'template' => '{input}{error}',
-            ],
+        'fieldConfig' => [
+            'template' => '{input}{error}',
+        ],
     ]); ?>
     <div class="span4 box">
         <div class="content-wrap">
-            <h6>商城 - 后台管理</h6>
+            <h6>商城 - 找回密码</h6>
+            <?php
+                if (Yii::$app->session->getFlash('info')) {
+                    echo Yii::$app->session->getFlash('info');
+                }
+            ?>
             <?= $form->field($model,"adminuser")->textInput(['class'=>'span12','placeholder'=>'管理员账号'])?>
-            <?= $form->field($model,"adminpass")->passwordInput(['class'=>'span12','placeholder'=>'管理员密码'])?>
+            <?= $form->field($model,"adminemail")->textInput(['class'=>'span12','placeholder'=>'管理员邮箱'])?>
 
-            <a href="<?= yii\helpers\Url::to(['public/seek-password']);?>" class="forgot">忘记密码?</a>
+            <a href="<?= yii\helpers\Url::to(['public/login']);?>" class="forgot">返回登录</a>
 
-            <?= $form->field($model,'rememberMe')->checkbox([
-                    'id' => 'remember-me',
-                    'template' => '<div class="remember">{input}<label for="remember-me">记住我</label></div>'
-            ]);?>
-
-            <?= Html::submitButton('登录',['class'=>"btn-glow primary login"]);?>
+            <?= Html::submitButton('找回密码',['class'=>"btn-glow primary login"]);?>
         </div>
     </div>
     <?php ActiveForm::end(); ?>

@@ -147,7 +147,7 @@
                 </a>
             </li>
             <li class="settings hidden-phone">
-                <a href="" role="button">
+                <a href="<?= yii\helpers\Url::to(['public/logout']) ?>" role="button">
                     <i class="icon-share-alt"></i>
                 </a>
             </li>
