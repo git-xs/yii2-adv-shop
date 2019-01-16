@@ -1,0 +1,314 @@
+2019-01-16 03:33:07 [127.0.0.1][-][-][error][ArgumentCountError] ArgumentCountError: Too few arguments to function yii\base\Module::__construct(), 0 passed in C:\phpStudy\PHPTutorial\WWW\yii2-adv-shop\backend\modules\controllers\PublicController.php on line 20 and at least 1 expected in C:\phpStudy\PHPTutorial\WWW\yii2-adv-shop\vendor\yiisoft\yii2\base\Module.php:154
+Stack trace:
+#0 C:\phpStudy\PHPTutorial\WWW\yii2-adv-shop\backend\modules\controllers\PublicController.php(20): yii\base\Module->__construct()
+#1 [internal function]: backend\modules\controllers\PublicController->actionLogin()
+#2 C:\phpStudy\PHPTutorial\WWW\yii2-adv-shop\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#3 C:\phpStudy\PHPTutorial\WWW\yii2-adv-shop\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#4 C:\phpStudy\PHPTutorial\WWW\yii2-adv-shop\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('login', Array)
+#5 C:\phpStudy\PHPTutorial\WWW\yii2-adv-shop\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('admin/public/lo...', Array)
+#6 C:\phpStudy\PHPTutorial\WWW\yii2-adv-shop\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 C:\phpStudy\PHPTutorial\WWW\yii2-adv-shop\backend\web\index.php(17): yii\base\Application->run()
+#8 {main}
+2019-01-16 03:33:07 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'admin/public/login'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'PATH' => 'C:\\phpStudy\\PHPTutorial\\php\\php-7.2.1-nts\\;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C:\\Program Files (x86)\\HI-TECH Software\\PICC\\9.82\\bin;C:\\TDM-GCC-64\\bin;D:\\xiaowugui\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\ProgramData\\ComposerSetup\\bin;C:\\Android;D:\\Git\\cmd;D:\\nodejs\\;C:\\Users\\谢绍\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\谢绍\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Users\\谢绍\\AppData\\Roaming\\npm'
+    'SYSTEMROOT' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'C:/phpStudy/PHPTutorial/php/php-7.2.1-nts/'
+    '_FCGI_SHUTDOWN_EVENT_' => '704'
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/index.php?r=admin/public/login'
+    'QUERY_STRING' => 'r=admin/public/login'
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REMOTE_PORT' => '56790'
+    'SCRIPT_FILENAME' => 'C:/phpStudy/PHPTutorial/WWW/yii2-adv-shop/backend/web/index.php'
+    'SERVER_ADMIN' => 'admin@php.cn'
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/phpStudy/PHPTutorial/WWW/yii2-adv-shop/backend/web'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'C:/phpStudy/PHPTutorial/WWW/yii2-adv-shop/backend/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_NAME' => 'www.yiishopb.com'
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Win32) OpenSSL/1.0.2j mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\WINDOWS'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_HOST' => 'www.yiishopb.com'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1547609587.3978
+    'REQUEST_TIME' => 1547609587
+]
+2019-01-16 03:33:44 [127.0.0.1][-][-][error][ArgumentCountError] ArgumentCountError: Too few arguments to function yii\base\Module::__construct(), 0 passed in C:\phpStudy\PHPTutorial\WWW\yii2-adv-shop\backend\modules\controllers\PublicController.php on line 20 and at least 1 expected in C:\phpStudy\PHPTutorial\WWW\yii2-adv-shop\vendor\yiisoft\yii2\base\Module.php:154
+Stack trace:
+#0 C:\phpStudy\PHPTutorial\WWW\yii2-adv-shop\backend\modules\controllers\PublicController.php(20): yii\base\Module->__construct()
+#1 [internal function]: backend\modules\controllers\PublicController->actionLogin()
+#2 C:\phpStudy\PHPTutorial\WWW\yii2-adv-shop\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#3 C:\phpStudy\PHPTutorial\WWW\yii2-adv-shop\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#4 C:\phpStudy\PHPTutorial\WWW\yii2-adv-shop\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('login', Array)
+#5 C:\phpStudy\PHPTutorial\WWW\yii2-adv-shop\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('admin/public/lo...', Array)
+#6 C:\phpStudy\PHPTutorial\WWW\yii2-adv-shop\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 C:\phpStudy\PHPTutorial\WWW\yii2-adv-shop\backend\web\index.php(17): yii\base\Application->run()
+#8 {main}
+2019-01-16 03:33:44 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'admin/public/login'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'PATH' => 'C:\\phpStudy\\PHPTutorial\\php\\php-7.2.1-nts\\;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C:\\Program Files (x86)\\HI-TECH Software\\PICC\\9.82\\bin;C:\\TDM-GCC-64\\bin;D:\\xiaowugui\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\ProgramData\\ComposerSetup\\bin;C:\\Android;D:\\Git\\cmd;D:\\nodejs\\;C:\\Users\\谢绍\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\谢绍\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Users\\谢绍\\AppData\\Roaming\\npm'
+    'SYSTEMROOT' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'C:/phpStudy/PHPTutorial/php/php-7.2.1-nts/'
+    '_FCGI_SHUTDOWN_EVENT_' => '704'
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/index.php?r=admin/public/login'
+    'QUERY_STRING' => 'r=admin/public/login'
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REMOTE_PORT' => '56866'
+    'SCRIPT_FILENAME' => 'C:/phpStudy/PHPTutorial/WWW/yii2-adv-shop/backend/web/index.php'
+    'SERVER_ADMIN' => 'admin@php.cn'
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/phpStudy/PHPTutorial/WWW/yii2-adv-shop/backend/web'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'C:/phpStudy/PHPTutorial/WWW/yii2-adv-shop/backend/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_NAME' => 'www.yiishopb.com'
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Win32) OpenSSL/1.0.2j mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\WINDOWS'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_HOST' => 'www.yiishopb.com'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1547609624.9059
+    'REQUEST_TIME' => 1547609624
+]
+2019-01-16 03:33:45 [127.0.0.1][-][-][error][ArgumentCountError] ArgumentCountError: Too few arguments to function yii\base\Module::__construct(), 0 passed in C:\phpStudy\PHPTutorial\WWW\yii2-adv-shop\backend\modules\controllers\PublicController.php on line 20 and at least 1 expected in C:\phpStudy\PHPTutorial\WWW\yii2-adv-shop\vendor\yiisoft\yii2\base\Module.php:154
+Stack trace:
+#0 C:\phpStudy\PHPTutorial\WWW\yii2-adv-shop\backend\modules\controllers\PublicController.php(20): yii\base\Module->__construct()
+#1 [internal function]: backend\modules\controllers\PublicController->actionLogin()
+#2 C:\phpStudy\PHPTutorial\WWW\yii2-adv-shop\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#3 C:\phpStudy\PHPTutorial\WWW\yii2-adv-shop\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#4 C:\phpStudy\PHPTutorial\WWW\yii2-adv-shop\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('login', Array)
+#5 C:\phpStudy\PHPTutorial\WWW\yii2-adv-shop\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('admin/public/lo...', Array)
+#6 C:\phpStudy\PHPTutorial\WWW\yii2-adv-shop\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 C:\phpStudy\PHPTutorial\WWW\yii2-adv-shop\backend\web\index.php(17): yii\base\Application->run()
+#8 {main}
+2019-01-16 03:33:45 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'admin/public/login'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'PATH' => 'C:\\phpStudy\\PHPTutorial\\php\\php-7.2.1-nts\\;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C:\\Program Files (x86)\\HI-TECH Software\\PICC\\9.82\\bin;C:\\TDM-GCC-64\\bin;D:\\xiaowugui\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\ProgramData\\ComposerSetup\\bin;C:\\Android;D:\\Git\\cmd;D:\\nodejs\\;C:\\Users\\谢绍\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\谢绍\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Users\\谢绍\\AppData\\Roaming\\npm'
+    'SYSTEMROOT' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'C:/phpStudy/PHPTutorial/php/php-7.2.1-nts/'
+    '_FCGI_SHUTDOWN_EVENT_' => '704'
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/index.php?r=admin/public/login'
+    'QUERY_STRING' => 'r=admin/public/login'
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REMOTE_PORT' => '56867'
+    'SCRIPT_FILENAME' => 'C:/phpStudy/PHPTutorial/WWW/yii2-adv-shop/backend/web/index.php'
+    'SERVER_ADMIN' => 'admin@php.cn'
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/phpStudy/PHPTutorial/WWW/yii2-adv-shop/backend/web'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'C:/phpStudy/PHPTutorial/WWW/yii2-adv-shop/backend/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_NAME' => 'www.yiishopb.com'
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Win32) OpenSSL/1.0.2j mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\WINDOWS'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_HOST' => 'www.yiishopb.com'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1547609625.6354
+    'REQUEST_TIME' => 1547609625
+]
+2019-01-16 03:33:46 [127.0.0.1][-][-][error][ArgumentCountError] ArgumentCountError: Too few arguments to function yii\base\Module::__construct(), 0 passed in C:\phpStudy\PHPTutorial\WWW\yii2-adv-shop\backend\modules\controllers\PublicController.php on line 20 and at least 1 expected in C:\phpStudy\PHPTutorial\WWW\yii2-adv-shop\vendor\yiisoft\yii2\base\Module.php:154
+Stack trace:
+#0 C:\phpStudy\PHPTutorial\WWW\yii2-adv-shop\backend\modules\controllers\PublicController.php(20): yii\base\Module->__construct()
+#1 [internal function]: backend\modules\controllers\PublicController->actionLogin()
+#2 C:\phpStudy\PHPTutorial\WWW\yii2-adv-shop\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#3 C:\phpStudy\PHPTutorial\WWW\yii2-adv-shop\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#4 C:\phpStudy\PHPTutorial\WWW\yii2-adv-shop\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('login', Array)
+#5 C:\phpStudy\PHPTutorial\WWW\yii2-adv-shop\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('admin/public/lo...', Array)
+#6 C:\phpStudy\PHPTutorial\WWW\yii2-adv-shop\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 C:\phpStudy\PHPTutorial\WWW\yii2-adv-shop\backend\web\index.php(17): yii\base\Application->run()
+#8 {main}
+2019-01-16 03:33:46 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'admin/public/login'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'PATH' => 'C:\\phpStudy\\PHPTutorial\\php\\php-7.2.1-nts\\;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C:\\Program Files (x86)\\HI-TECH Software\\PICC\\9.82\\bin;C:\\TDM-GCC-64\\bin;D:\\xiaowugui\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\ProgramData\\ComposerSetup\\bin;C:\\Android;D:\\Git\\cmd;D:\\nodejs\\;C:\\Users\\谢绍\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\谢绍\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Users\\谢绍\\AppData\\Roaming\\npm'
+    'SYSTEMROOT' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'C:/phpStudy/PHPTutorial/php/php-7.2.1-nts/'
+    '_FCGI_SHUTDOWN_EVENT_' => '704'
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/index.php?r=admin/public/login'
+    'QUERY_STRING' => 'r=admin/public/login'
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REMOTE_PORT' => '56868'
+    'SCRIPT_FILENAME' => 'C:/phpStudy/PHPTutorial/WWW/yii2-adv-shop/backend/web/index.php'
+    'SERVER_ADMIN' => 'admin@php.cn'
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/phpStudy/PHPTutorial/WWW/yii2-adv-shop/backend/web'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'C:/phpStudy/PHPTutorial/WWW/yii2-adv-shop/backend/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_NAME' => 'www.yiishopb.com'
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Win32) OpenSSL/1.0.2j mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\WINDOWS'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_HOST' => 'www.yiishopb.com'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1547609626.1878
+    'REQUEST_TIME' => 1547609626
+]
+2019-01-16 03:33:57 [127.0.0.1][-][-][error][ArgumentCountError] ArgumentCountError: Too few arguments to function yii\base\Module::__construct(), 0 passed in C:\phpStudy\PHPTutorial\WWW\yii2-adv-shop\backend\modules\controllers\PublicController.php on line 20 and at least 1 expected in C:\phpStudy\PHPTutorial\WWW\yii2-adv-shop\vendor\yiisoft\yii2\base\Module.php:154
+Stack trace:
+#0 C:\phpStudy\PHPTutorial\WWW\yii2-adv-shop\backend\modules\controllers\PublicController.php(20): yii\base\Module->__construct()
+#1 [internal function]: backend\modules\controllers\PublicController->actionLogin()
+#2 C:\phpStudy\PHPTutorial\WWW\yii2-adv-shop\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#3 C:\phpStudy\PHPTutorial\WWW\yii2-adv-shop\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#4 C:\phpStudy\PHPTutorial\WWW\yii2-adv-shop\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('login', Array)
+#5 C:\phpStudy\PHPTutorial\WWW\yii2-adv-shop\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('admin/public/lo...', Array)
+#6 C:\phpStudy\PHPTutorial\WWW\yii2-adv-shop\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 C:\phpStudy\PHPTutorial\WWW\yii2-adv-shop\backend\web\index.php(17): yii\base\Application->run()
+#8 {main}
+2019-01-16 03:33:56 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'admin/public/login'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'PATH' => 'C:\\phpStudy\\PHPTutorial\\php\\php-7.2.1-nts\\;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C:\\Program Files (x86)\\HI-TECH Software\\PICC\\9.82\\bin;C:\\TDM-GCC-64\\bin;D:\\xiaowugui\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\ProgramData\\ComposerSetup\\bin;C:\\Android;D:\\Git\\cmd;D:\\nodejs\\;C:\\Users\\谢绍\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\谢绍\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Users\\谢绍\\AppData\\Roaming\\npm'
+    'SYSTEMROOT' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'C:/phpStudy/PHPTutorial/php/php-7.2.1-nts/'
+    '_FCGI_SHUTDOWN_EVENT_' => '704'
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/index.php?r=admin/public/login'
+    'QUERY_STRING' => 'r=admin/public/login'
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REMOTE_PORT' => '56894'
+    'SCRIPT_FILENAME' => 'C:/phpStudy/PHPTutorial/WWW/yii2-adv-shop/backend/web/index.php'
+    'SERVER_ADMIN' => 'admin@php.cn'
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/phpStudy/PHPTutorial/WWW/yii2-adv-shop/backend/web'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'C:/phpStudy/PHPTutorial/WWW/yii2-adv-shop/backend/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_NAME' => 'www.yiishopb.com'
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Win32) OpenSSL/1.0.2j mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\WINDOWS'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_HOST' => 'www.yiishopb.com'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1547609636.9492
+    'REQUEST_TIME' => 1547609636
+]
