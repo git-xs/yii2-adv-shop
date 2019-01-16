@@ -22,7 +22,10 @@ class PublicController extends Controller
 
         if (Yii::$app->request->isPost) {
             $post = Yii::$app->request->post();
-            $model->login($post);
+            if ($model->login($post)) {
+                $this->redirect(['default/index']);
+                Yii::$app->end();
+            }
         }
         return $this->render("login",['model'=> $model]);
     }

@@ -147,7 +147,7 @@
                 </a>
             </li>
             <li class="settings hidden-phone">
-                <a href="signin.html" role="button">
+                <a href="" role="button">
                     <i class="icon-share-alt"></i>
                 </a>
             </li>

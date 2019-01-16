@@ -312,3 +312,620 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1547609636.9492
     'REQUEST_TIME' => 1547609636
 ]
+2019-01-16 04:50:46 [127.0.0.1][-][-][error][ReflectionException] ReflectionException: Class validatePass does not exist in C:\phpStudy\PHPTutorial\WWW\yii2-adv-shop\vendor\yiisoft\yii2\di\Container.php:428
+Stack trace:
+#0 C:\phpStudy\PHPTutorial\WWW\yii2-adv-shop\vendor\yiisoft\yii2\di\Container.php(428): ReflectionClass->__construct('validatePass')
+#1 C:\phpStudy\PHPTutorial\WWW\yii2-adv-shop\vendor\yiisoft\yii2\di\Container.php(364): yii\di\Container->getDependencies('validatePass')
+#2 C:\phpStudy\PHPTutorial\WWW\yii2-adv-shop\vendor\yiisoft\yii2\di\Container.php(156): yii\di\Container->build('validatePass', Array, Array)
+#3 C:\phpStudy\PHPTutorial\WWW\yii2-adv-shop\vendor\yiisoft\yii2\BaseYii.php(349): yii\di\Container->get('validatePass', Array, Array)
+#4 C:\phpStudy\PHPTutorial\WWW\yii2-adv-shop\vendor\yiisoft\yii2\validators\Validator.php(226): yii\BaseYii::createObject(Array)
+#5 C:\phpStudy\PHPTutorial\WWW\yii2-adv-shop\vendor\yiisoft\yii2\base\Model.php(458): yii\validators\Validator::createValidator('validatePass', Object(backend\modules\models\Admin), Array, Array)
+#6 C:\phpStudy\PHPTutorial\WWW\yii2-adv-shop\vendor\yiisoft\yii2\base\Model.php(420): yii\base\Model->createValidators()
+#7 C:\phpStudy\PHPTutorial\WWW\yii2-adv-shop\vendor\yiisoft\yii2\base\Model.php(189): yii\base\Model->getValidators()
+#8 C:\phpStudy\PHPTutorial\WWW\yii2-adv-shop\vendor\yiisoft\yii2\base\Model.php(785): yii\base\Model->scenarios()
+#9 C:\phpStudy\PHPTutorial\WWW\yii2-adv-shop\vendor\yiisoft\yii2\base\Model.php(729): yii\base\Model->safeAttributes()
+#10 C:\phpStudy\PHPTutorial\WWW\yii2-adv-shop\vendor\yiisoft\yii2\base\Model.php(861): yii\base\Model->setAttributes(Array)
+#11 C:\phpStudy\PHPTutorial\WWW\yii2-adv-shop\backend\modules\models\Admin.php(48): yii\base\Model->load(Array)
+#12 C:\phpStudy\PHPTutorial\WWW\yii2-adv-shop\backend\modules\controllers\PublicController.php(25): backend\modules\models\Admin->login(Array)
+#13 [internal function]: backend\modules\controllers\PublicController->actionLogin()
+#14 C:\phpStudy\PHPTutorial\WWW\yii2-adv-shop\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#15 C:\phpStudy\PHPTutorial\WWW\yii2-adv-shop\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#16 C:\phpStudy\PHPTutorial\WWW\yii2-adv-shop\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('login', Array)
+#17 C:\phpStudy\PHPTutorial\WWW\yii2-adv-shop\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('admin/public/lo...', Array)
+#18 C:\phpStudy\PHPTutorial\WWW\yii2-adv-shop\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#19 C:\phpStudy\PHPTutorial\WWW\yii2-adv-shop\backend\web\index.php(17): yii\base\Application->run()
+#20 {main}
+2019-01-16 04:50:46 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'admin/public/login'
+]
+
+$_POST = [
+    '_csrf-backend' => 'IalVA6Afi4qQnpGwzum2TafZlVb_MQH9AEGx7V2PmY1W8xpM0EfHyenZoua_pt0M_5PiMZpIQIxWCPOhLOzR1Q=='
+    'Admin' => [
+        'adminuser' => 'xieshao'
+        'adminpass' => '123123'
+        'rememberMe' => '1'
+    ]
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf-backend' => 'c27ccd5745cae1d3c6edb34f6f412d415f62bb3b8eac3a836beebea1fb577d4aa:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"wZOOpXLCyG3VqOkAXJwgeyAqVIBLqcHX\";}'
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\phpStudy\\PHPTutorial\\php\\php-7.2.1-nts\\;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C:\\Program Files (x86)\\HI-TECH Software\\PICC\\9.82\\bin;C:\\TDM-GCC-64\\bin;D:\\xiaowugui\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\ProgramData\\ComposerSetup\\bin;C:\\Android;D:\\Git\\cmd;D:\\nodejs\\;C:\\Users\\谢绍\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\谢绍\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Users\\谢绍\\AppData\\Roaming\\npm'
+    'SYSTEMROOT' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'C:/phpStudy/PHPTutorial/php/php-7.2.1-nts/'
+    '_FCGI_SHUTDOWN_EVENT_' => '2240'
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/index.php?r=admin/public/login'
+    'QUERY_STRING' => 'r=admin/public/login'
+    'REQUEST_METHOD' => 'POST'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REMOTE_PORT' => '65172'
+    'SCRIPT_FILENAME' => 'C:/phpStudy/PHPTutorial/WWW/yii2-adv-shop/backend/web/index.php'
+    'SERVER_ADMIN' => 'admin@php.cn'
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/phpStudy/PHPTutorial/WWW/yii2-adv-shop/backend/web'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'C:/phpStudy/PHPTutorial/WWW/yii2-adv-shop/backend/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_NAME' => 'www.yiishopb.com'
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Win32) OpenSSL/1.0.2j mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\WINDOWS'
+    'HTTP_COOKIE' => '_csrf-backend=c27ccd5745cae1d3c6edb34f6f412d415f62bb3b8eac3a836beebea1fb577d4aa%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22wZOOpXLCyG3VqOkAXJwgeyAqVIBLqcHX%22%3B%7D'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://www.yiishopb.com/index.php?r=admin/public/login'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_ORIGIN' => 'http://www.yiishopb.com'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'CONTENT_LENGTH' => '211'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_HOST' => 'www.yiishopb.com'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1547614246.6815
+    'REQUEST_TIME' => 1547614246
+]
+2019-01-16 04:57:50 [127.0.0.1][-][7jgp5ojh3t3vh3fgj6rjamt40m][error][yii\base\ErrorException:2] yii\base\ErrorException: session_set_cookie_params(): Cannot change session cookie parameters when session is active in C:\phpStudy\PHPTutorial\WWW\yii2-adv-shop\backend\modules\models\Admin.php:54
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(2, 'session_set_coo...', 'C:\\phpStudy\\PHP...', 54, Array)
+#1 C:\phpStudy\PHPTutorial\WWW\yii2-adv-shop\backend\modules\models\Admin.php(54): session_set_cookie_params(86400)
+#2 C:\phpStudy\PHPTutorial\WWW\yii2-adv-shop\backend\modules\controllers\PublicController.php(25): backend\modules\models\Admin->login(Array)
+#3 [internal function]: backend\modules\controllers\PublicController->actionLogin()
+#4 C:\phpStudy\PHPTutorial\WWW\yii2-adv-shop\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#5 C:\phpStudy\PHPTutorial\WWW\yii2-adv-shop\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#6 C:\phpStudy\PHPTutorial\WWW\yii2-adv-shop\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('login', Array)
+#7 C:\phpStudy\PHPTutorial\WWW\yii2-adv-shop\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('admin/public/lo...', Array)
+#8 C:\phpStudy\PHPTutorial\WWW\yii2-adv-shop\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 C:\phpStudy\PHPTutorial\WWW\yii2-adv-shop\backend\web\index.php(17): yii\base\Application->run()
+#10 {main}
+2019-01-16 04:57:50 [127.0.0.1][-][7jgp5ojh3t3vh3fgj6rjamt40m][info][application] $_GET = [
+    'r' => 'admin/public/login'
+]
+
+$_POST = [
+    '_csrf-backend' => '3sEZ0GMCCgswuRcWL92FBc20n1ZH5_eUcxNJsE-6f1ypm1afE1pGSEn-JEBeku5Elf7oMSKetuUlWgv8Ptk3BA=='
+    'Admin' => [
+        'adminuser' => 'admin'
+        'adminpass' => '12312'
+        'rememberMe' => '1'
+    ]
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf-backend' => 'c27ccd5745cae1d3c6edb34f6f412d415f62bb3b8eac3a836beebea1fb577d4aa:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"wZOOpXLCyG3VqOkAXJwgeyAqVIBLqcHX\";}'
+    'advanced-backend' => '7jgp5ojh3t3vh3fgj6rjamt40m'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'admin' => [
+        'adminuser' => 'admin'
+        'isLogin' => 1
+    ]
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\phpStudy\\PHPTutorial\\php\\php-7.2.1-nts\\;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C:\\Program Files (x86)\\HI-TECH Software\\PICC\\9.82\\bin;C:\\TDM-GCC-64\\bin;D:\\xiaowugui\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\ProgramData\\ComposerSetup\\bin;C:\\Android;D:\\Git\\cmd;D:\\nodejs\\;C:\\Users\\谢绍\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\谢绍\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Users\\谢绍\\AppData\\Roaming\\npm'
+    'SYSTEMROOT' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'C:/phpStudy/PHPTutorial/php/php-7.2.1-nts/'
+    '_FCGI_SHUTDOWN_EVENT_' => '2184'
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/index.php?r=admin/public/login'
+    'QUERY_STRING' => 'r=admin/public/login'
+    'REQUEST_METHOD' => 'POST'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REMOTE_PORT' => '49447'
+    'SCRIPT_FILENAME' => 'C:/phpStudy/PHPTutorial/WWW/yii2-adv-shop/backend/web/index.php'
+    'SERVER_ADMIN' => 'admin@php.cn'
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/phpStudy/PHPTutorial/WWW/yii2-adv-shop/backend/web'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'C:/phpStudy/PHPTutorial/WWW/yii2-adv-shop/backend/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_NAME' => 'www.yiishopb.com'
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Win32) OpenSSL/1.0.2j mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\WINDOWS'
+    'HTTP_COOKIE' => '_csrf-backend=c27ccd5745cae1d3c6edb34f6f412d415f62bb3b8eac3a836beebea1fb577d4aa%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22wZOOpXLCyG3VqOkAXJwgeyAqVIBLqcHX%22%3B%7D; advanced-backend=7jgp5ojh3t3vh3fgj6rjamt40m'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://www.yiishopb.com/index.php?r=admin/public/login'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_ORIGIN' => 'http://www.yiishopb.com'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'CONTENT_LENGTH' => '208'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_HOST' => 'www.yiishopb.com'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1547614670.3594
+    'REQUEST_TIME' => 1547614670
+]
+2019-01-16 05:31:21 [127.0.0.1][-][7jgp5ojh3t3vh3fgj6rjamt40m][error][yii\base\ErrorException:2] yii\base\ErrorException: session_set_cookie_params(): Cannot change session cookie parameters when session is active in C:\phpStudy\PHPTutorial\WWW\yii2-adv-shop\backend\modules\models\Admin.php:54
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(2, 'session_set_coo...', 'C:\\phpStudy\\PHP...', 54, Array)
+#1 C:\phpStudy\PHPTutorial\WWW\yii2-adv-shop\backend\modules\models\Admin.php(54): session_set_cookie_params(86400)
+#2 C:\phpStudy\PHPTutorial\WWW\yii2-adv-shop\backend\modules\controllers\PublicController.php(25): backend\modules\models\Admin->login(Array)
+#3 [internal function]: backend\modules\controllers\PublicController->actionLogin()
+#4 C:\phpStudy\PHPTutorial\WWW\yii2-adv-shop\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#5 C:\phpStudy\PHPTutorial\WWW\yii2-adv-shop\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#6 C:\phpStudy\PHPTutorial\WWW\yii2-adv-shop\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('login', Array)
+#7 C:\phpStudy\PHPTutorial\WWW\yii2-adv-shop\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('admin/public/lo...', Array)
+#8 C:\phpStudy\PHPTutorial\WWW\yii2-adv-shop\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 C:\phpStudy\PHPTutorial\WWW\yii2-adv-shop\backend\web\index.php(17): yii\base\Application->run()
+#10 {main}
+2019-01-16 05:31:21 [127.0.0.1][-][7jgp5ojh3t3vh3fgj6rjamt40m][info][application] $_GET = [
+    'r' => 'admin/public/login'
+]
+
+$_POST = [
+    '_csrf-backend' => 'Hs2chj43Ff-J5rN5IuehVKeZz04JcuCfqVl8yabCVedpl9PJTm9ZvPChgC9TqMoV_9O4KWwLoe7_ED6F16Edvw=='
+    'Admin' => [
+        'adminuser' => 'admin'
+        'adminpass' => 'asdasdasd'
+        'rememberMe' => '1'
+    ]
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf-backend' => 'c27ccd5745cae1d3c6edb34f6f412d415f62bb3b8eac3a836beebea1fb577d4aa:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"wZOOpXLCyG3VqOkAXJwgeyAqVIBLqcHX\";}'
+    'advanced-backend' => '7jgp5ojh3t3vh3fgj6rjamt40m'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'admin' => [
+        'adminuser' => 'admin'
+        'isLogin' => 1
+    ]
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\phpStudy\\PHPTutorial\\php\\php-7.2.1-nts\\;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C:\\Program Files (x86)\\HI-TECH Software\\PICC\\9.82\\bin;C:\\TDM-GCC-64\\bin;D:\\xiaowugui\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\ProgramData\\ComposerSetup\\bin;C:\\Android;D:\\Git\\cmd;D:\\nodejs\\;C:\\Users\\谢绍\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\谢绍\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Users\\谢绍\\AppData\\Roaming\\npm'
+    'SYSTEMROOT' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'C:/phpStudy/PHPTutorial/php/php-7.2.1-nts/'
+    '_FCGI_SHUTDOWN_EVENT_' => '2156'
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/index.php?r=admin/public/login'
+    'QUERY_STRING' => 'r=admin/public/login'
+    'REQUEST_METHOD' => 'POST'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REMOTE_PORT' => '52604'
+    'SCRIPT_FILENAME' => 'C:/phpStudy/PHPTutorial/WWW/yii2-adv-shop/backend/web/index.php'
+    'SERVER_ADMIN' => 'admin@php.cn'
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/phpStudy/PHPTutorial/WWW/yii2-adv-shop/backend/web'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'C:/phpStudy/PHPTutorial/WWW/yii2-adv-shop/backend/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_NAME' => 'www.yiishopb.com'
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Win32) OpenSSL/1.0.2j mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\WINDOWS'
+    'HTTP_COOKIE' => '_csrf-backend=c27ccd5745cae1d3c6edb34f6f412d415f62bb3b8eac3a836beebea1fb577d4aa%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22wZOOpXLCyG3VqOkAXJwgeyAqVIBLqcHX%22%3B%7D; advanced-backend=7jgp5ojh3t3vh3fgj6rjamt40m'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://www.yiishopb.com/index.php?r=admin/public/login'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_ORIGIN' => 'http://www.yiishopb.com'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'CONTENT_LENGTH' => '212'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_HOST' => 'www.yiishopb.com'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1547616681.374
+    'REQUEST_TIME' => 1547616681
+]
+2019-01-16 05:32:11 [127.0.0.1][-][7jgp5ojh3t3vh3fgj6rjamt40m][error][yii\base\ErrorException:2] yii\base\ErrorException: session_set_cookie_params(): Cannot change session cookie parameters when session is active in C:\phpStudy\PHPTutorial\WWW\yii2-adv-shop\backend\modules\models\Admin.php:54
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(2, 'session_set_coo...', 'C:\\phpStudy\\PHP...', 54, Array)
+#1 C:\phpStudy\PHPTutorial\WWW\yii2-adv-shop\backend\modules\models\Admin.php(54): session_set_cookie_params(86400)
+#2 C:\phpStudy\PHPTutorial\WWW\yii2-adv-shop\backend\modules\controllers\PublicController.php(25): backend\modules\models\Admin->login(Array)
+#3 [internal function]: backend\modules\controllers\PublicController->actionLogin()
+#4 C:\phpStudy\PHPTutorial\WWW\yii2-adv-shop\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#5 C:\phpStudy\PHPTutorial\WWW\yii2-adv-shop\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#6 C:\phpStudy\PHPTutorial\WWW\yii2-adv-shop\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('login', Array)
+#7 C:\phpStudy\PHPTutorial\WWW\yii2-adv-shop\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('admin/public/lo...', Array)
+#8 C:\phpStudy\PHPTutorial\WWW\yii2-adv-shop\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 C:\phpStudy\PHPTutorial\WWW\yii2-adv-shop\backend\web\index.php(17): yii\base\Application->run()
+#10 {main}
+2019-01-16 05:32:11 [127.0.0.1][-][7jgp5ojh3t3vh3fgj6rjamt40m][info][application] $_GET = [
+    'r' => 'admin/public/login'
+]
+
+$_POST = [
+    '_csrf-backend' => '8VvIZlgGhSp5UiFaZyWzabLd47tFbBbvbHFfM_5fMWmGAYcpKF7JaQAVEgwWatgo6peU3CAVV546OB1_jzx5MQ=='
+    'Admin' => [
+        'adminuser' => 'admin'
+        'adminpass' => 'sdfsdfsdf'
+        'rememberMe' => '1'
+    ]
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf-backend' => 'c27ccd5745cae1d3c6edb34f6f412d415f62bb3b8eac3a836beebea1fb577d4aa:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"wZOOpXLCyG3VqOkAXJwgeyAqVIBLqcHX\";}'
+    'advanced-backend' => '7jgp5ojh3t3vh3fgj6rjamt40m'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'admin' => [
+        'adminuser' => 'admin'
+        'isLogin' => 1
+    ]
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\phpStudy\\PHPTutorial\\php\\php-7.2.1-nts\\;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C:\\Program Files (x86)\\HI-TECH Software\\PICC\\9.82\\bin;C:\\TDM-GCC-64\\bin;D:\\xiaowugui\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\ProgramData\\ComposerSetup\\bin;C:\\Android;D:\\Git\\cmd;D:\\nodejs\\;C:\\Users\\谢绍\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\谢绍\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Users\\谢绍\\AppData\\Roaming\\npm'
+    'SYSTEMROOT' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'C:/phpStudy/PHPTutorial/php/php-7.2.1-nts/'
+    '_FCGI_SHUTDOWN_EVENT_' => '2156'
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/index.php?r=admin/public/login'
+    'QUERY_STRING' => 'r=admin/public/login'
+    'REQUEST_METHOD' => 'POST'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REMOTE_PORT' => '52676'
+    'SCRIPT_FILENAME' => 'C:/phpStudy/PHPTutorial/WWW/yii2-adv-shop/backend/web/index.php'
+    'SERVER_ADMIN' => 'admin@php.cn'
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/phpStudy/PHPTutorial/WWW/yii2-adv-shop/backend/web'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'C:/phpStudy/PHPTutorial/WWW/yii2-adv-shop/backend/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_NAME' => 'www.yiishopb.com'
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Win32) OpenSSL/1.0.2j mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\WINDOWS'
+    'HTTP_COOKIE' => '_csrf-backend=c27ccd5745cae1d3c6edb34f6f412d415f62bb3b8eac3a836beebea1fb577d4aa%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22wZOOpXLCyG3VqOkAXJwgeyAqVIBLqcHX%22%3B%7D; advanced-backend=7jgp5ojh3t3vh3fgj6rjamt40m'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://www.yiishopb.com/index.php?r=admin/public/login'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_ORIGIN' => 'http://www.yiishopb.com'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'CONTENT_LENGTH' => '212'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_HOST' => 'www.yiishopb.com'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1547616731.5877
+    'REQUEST_TIME' => 1547616731
+]
+2019-01-16 05:32:19 [127.0.0.1][-][7jgp5ojh3t3vh3fgj6rjamt40m][error][yii\base\ErrorException:2] yii\base\ErrorException: session_set_cookie_params(): Cannot change session cookie parameters when session is active in C:\phpStudy\PHPTutorial\WWW\yii2-adv-shop\backend\modules\models\Admin.php:54
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(2, 'session_set_coo...', 'C:\\phpStudy\\PHP...', 54, Array)
+#1 C:\phpStudy\PHPTutorial\WWW\yii2-adv-shop\backend\modules\models\Admin.php(54): session_set_cookie_params(86400)
+#2 C:\phpStudy\PHPTutorial\WWW\yii2-adv-shop\backend\modules\controllers\PublicController.php(25): backend\modules\models\Admin->login(Array)
+#3 [internal function]: backend\modules\controllers\PublicController->actionLogin()
+#4 C:\phpStudy\PHPTutorial\WWW\yii2-adv-shop\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#5 C:\phpStudy\PHPTutorial\WWW\yii2-adv-shop\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#6 C:\phpStudy\PHPTutorial\WWW\yii2-adv-shop\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('login', Array)
+#7 C:\phpStudy\PHPTutorial\WWW\yii2-adv-shop\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('admin/public/lo...', Array)
+#8 C:\phpStudy\PHPTutorial\WWW\yii2-adv-shop\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 C:\phpStudy\PHPTutorial\WWW\yii2-adv-shop\backend\web\index.php(17): yii\base\Application->run()
+#10 {main}
+2019-01-16 05:32:19 [127.0.0.1][-][7jgp5ojh3t3vh3fgj6rjamt40m][info][application] $_GET = [
+    'r' => 'admin/public/login'
+]
+
+$_POST = [
+    '_csrf-backend' => 'iMDUzQnUg5xnhfUMzxFP4RNzIQF2zF-QrMR30aQxyNf_mpuCeYzP3x7Cxlq-XiSgSzlWZhO1HuH6jTWd1VKAjw=='
+    'Admin' => [
+        'adminuser' => 'xieshao'
+        'adminpass' => 'asdasd'
+        'rememberMe' => '1'
+    ]
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf-backend' => 'c27ccd5745cae1d3c6edb34f6f412d415f62bb3b8eac3a836beebea1fb577d4aa:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"wZOOpXLCyG3VqOkAXJwgeyAqVIBLqcHX\";}'
+    'advanced-backend' => '7jgp5ojh3t3vh3fgj6rjamt40m'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'admin' => [
+        'adminuser' => 'admin'
+        'isLogin' => 1
+    ]
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\phpStudy\\PHPTutorial\\php\\php-7.2.1-nts\\;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C:\\Program Files (x86)\\HI-TECH Software\\PICC\\9.82\\bin;C:\\TDM-GCC-64\\bin;D:\\xiaowugui\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\ProgramData\\ComposerSetup\\bin;C:\\Android;D:\\Git\\cmd;D:\\nodejs\\;C:\\Users\\谢绍\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\谢绍\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Users\\谢绍\\AppData\\Roaming\\npm'
+    'SYSTEMROOT' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'C:/phpStudy/PHPTutorial/php/php-7.2.1-nts/'
+    '_FCGI_SHUTDOWN_EVENT_' => '2156'
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/index.php?r=admin/public/login'
+    'QUERY_STRING' => 'r=admin/public/login'
+    'REQUEST_METHOD' => 'POST'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REMOTE_PORT' => '52721'
+    'SCRIPT_FILENAME' => 'C:/phpStudy/PHPTutorial/WWW/yii2-adv-shop/backend/web/index.php'
+    'SERVER_ADMIN' => 'admin@php.cn'
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/phpStudy/PHPTutorial/WWW/yii2-adv-shop/backend/web'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'C:/phpStudy/PHPTutorial/WWW/yii2-adv-shop/backend/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_NAME' => 'www.yiishopb.com'
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Win32) OpenSSL/1.0.2j mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\WINDOWS'
+    'HTTP_COOKIE' => '_csrf-backend=c27ccd5745cae1d3c6edb34f6f412d415f62bb3b8eac3a836beebea1fb577d4aa%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22wZOOpXLCyG3VqOkAXJwgeyAqVIBLqcHX%22%3B%7D; advanced-backend=7jgp5ojh3t3vh3fgj6rjamt40m'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://www.yiishopb.com/index.php?r=admin/public/login'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_ORIGIN' => 'http://www.yiishopb.com'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'CONTENT_LENGTH' => '211'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_HOST' => 'www.yiishopb.com'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1547616739.4054
+    'REQUEST_TIME' => 1547616739
+]
+2019-01-16 05:38:10 [127.0.0.1][-][2u0e9ovn3qnhqc8qo5pi57crp7][error][yii\base\ErrorException:2] yii\base\ErrorException: session_set_cookie_params(): Cannot change session cookie parameters when session is active in C:\phpStudy\PHPTutorial\WWW\yii2-adv-shop\backend\modules\models\Admin.php:54
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(2, 'session_set_coo...', 'C:\\phpStudy\\PHP...', 54, Array)
+#1 C:\phpStudy\PHPTutorial\WWW\yii2-adv-shop\backend\modules\models\Admin.php(54): session_set_cookie_params(86400)
+#2 C:\phpStudy\PHPTutorial\WWW\yii2-adv-shop\backend\modules\controllers\PublicController.php(25): backend\modules\models\Admin->login(Array)
+#3 [internal function]: backend\modules\controllers\PublicController->actionLogin()
+#4 C:\phpStudy\PHPTutorial\WWW\yii2-adv-shop\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#5 C:\phpStudy\PHPTutorial\WWW\yii2-adv-shop\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#6 C:\phpStudy\PHPTutorial\WWW\yii2-adv-shop\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('login', Array)
+#7 C:\phpStudy\PHPTutorial\WWW\yii2-adv-shop\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('admin/public/lo...', Array)
+#8 C:\phpStudy\PHPTutorial\WWW\yii2-adv-shop\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 C:\phpStudy\PHPTutorial\WWW\yii2-adv-shop\backend\web\index.php(17): yii\base\Application->run()
+#10 {main}
+2019-01-16 05:38:10 [127.0.0.1][-][2u0e9ovn3qnhqc8qo5pi57crp7][info][application] $_GET = [
+    'r' => 'admin/public/login'
+]
+
+$_POST = [
+    '_csrf-backend' => 'lv3f92wiYM5smYRigARZGBLEUzEkj9iyL1MfhvV9QwThp5C4HHosjRXetzTxSzJZSo4kVkH2mcN5Gl3KhB4LXA=='
+    'Admin' => [
+        'adminuser' => 'admin'
+        'adminpass' => '123'
+        'rememberMe' => '1'
+    ]
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf-backend' => 'c27ccd5745cae1d3c6edb34f6f412d415f62bb3b8eac3a836beebea1fb577d4aa:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"wZOOpXLCyG3VqOkAXJwgeyAqVIBLqcHX\";}'
+    'advanced-backend' => '2u0e9ovn3qnhqc8qo5pi57crp7'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'admin' => [
+        'adminuser' => 'admin'
+        'isLogin' => 1
+    ]
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\phpStudy\\PHPTutorial\\php\\php-7.2.1-nts\\;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C:\\Program Files (x86)\\HI-TECH Software\\PICC\\9.82\\bin;C:\\TDM-GCC-64\\bin;D:\\xiaowugui\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\ProgramData\\ComposerSetup\\bin;C:\\Android;D:\\Git\\cmd;D:\\nodejs\\;C:\\Users\\谢绍\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\谢绍\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Users\\谢绍\\AppData\\Roaming\\npm'
+    'SYSTEMROOT' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'C:/phpStudy/PHPTutorial/php/php-7.2.1-nts/'
+    '_FCGI_SHUTDOWN_EVENT_' => '2184'
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/index.php?r=admin/public/login'
+    'QUERY_STRING' => 'r=admin/public/login'
+    'REQUEST_METHOD' => 'POST'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REMOTE_PORT' => '53399'
+    'SCRIPT_FILENAME' => 'C:/phpStudy/PHPTutorial/WWW/yii2-adv-shop/backend/web/index.php'
+    'SERVER_ADMIN' => 'admin@php.cn'
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/phpStudy/PHPTutorial/WWW/yii2-adv-shop/backend/web'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'C:/phpStudy/PHPTutorial/WWW/yii2-adv-shop/backend/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_NAME' => 'www.yiishopb.com'
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Win32) OpenSSL/1.0.2j mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\WINDOWS'
+    'HTTP_COOKIE' => '_csrf-backend=c27ccd5745cae1d3c6edb34f6f412d415f62bb3b8eac3a836beebea1fb577d4aa%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22wZOOpXLCyG3VqOkAXJwgeyAqVIBLqcHX%22%3B%7D; advanced-backend=2u0e9ovn3qnhqc8qo5pi57crp7'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://www.yiishopb.com/index.php?r=admin/public/login'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_ORIGIN' => 'http://www.yiishopb.com'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'CONTENT_LENGTH' => '206'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_HOST' => 'www.yiishopb.com'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1547617090.0612
+    'REQUEST_TIME' => 1547617090
+]
+2019-01-16 05:42:01 [127.0.0.1][-][2u0e9ovn3qnhqc8qo5pi57crp7][error][yii\base\ErrorException:2] yii\base\ErrorException: session_set_cookie_params(): Cannot change session cookie parameters when session is active in C:\phpStudy\PHPTutorial\WWW\yii2-adv-shop\backend\modules\models\Admin.php:54
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(2, 'session_set_coo...', 'C:\\phpStudy\\PHP...', 54, Array)
+#1 C:\phpStudy\PHPTutorial\WWW\yii2-adv-shop\backend\modules\models\Admin.php(54): session_set_cookie_params(86400)
+#2 C:\phpStudy\PHPTutorial\WWW\yii2-adv-shop\backend\modules\controllers\PublicController.php(25): backend\modules\models\Admin->login(Array)
+#3 [internal function]: backend\modules\controllers\PublicController->actionLogin()
+#4 C:\phpStudy\PHPTutorial\WWW\yii2-adv-shop\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#5 C:\phpStudy\PHPTutorial\WWW\yii2-adv-shop\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#6 C:\phpStudy\PHPTutorial\WWW\yii2-adv-shop\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('login', Array)
+#7 C:\phpStudy\PHPTutorial\WWW\yii2-adv-shop\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('admin/public/lo...', Array)
+#8 C:\phpStudy\PHPTutorial\WWW\yii2-adv-shop\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 C:\phpStudy\PHPTutorial\WWW\yii2-adv-shop\backend\web\index.php(17): yii\base\Application->run()
+#10 {main}
+2019-01-16 05:42:01 [127.0.0.1][-][2u0e9ovn3qnhqc8qo5pi57crp7][info][application] $_GET = [
+    'r' => 'admin/public/login'
+]
+
+$_POST = [
+    '_csrf-backend' => '3hXf6Z7iBKcWW_Ylj9TrPK8Pv5qiyE77XktTeRrIa-6pT5Cm7rpI5G8cxXP-m4B990XI_cexD4oIAhE1a6sjtg=='
+    'Admin' => [
+        'adminuser' => 'admin'
+        'adminpass' => '123'
+        'rememberMe' => '1'
+    ]
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf-backend' => 'c27ccd5745cae1d3c6edb34f6f412d415f62bb3b8eac3a836beebea1fb577d4aa:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"wZOOpXLCyG3VqOkAXJwgeyAqVIBLqcHX\";}'
+    'advanced-backend' => '2u0e9ovn3qnhqc8qo5pi57crp7'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'admin' => [
+        'adminuser' => 'admin'
+        'isLogin' => 1
+    ]
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\phpStudy\\PHPTutorial\\php\\php-7.2.1-nts\\;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C:\\Program Files (x86)\\HI-TECH Software\\PICC\\9.82\\bin;C:\\TDM-GCC-64\\bin;D:\\xiaowugui\\bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\ProgramData\\ComposerSetup\\bin;C:\\Android;D:\\Git\\cmd;D:\\nodejs\\;C:\\Users\\谢绍\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\谢绍\\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Users\\谢绍\\AppData\\Roaming\\npm'
+    'SYSTEMROOT' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'C:/phpStudy/PHPTutorial/php/php-7.2.1-nts/'
+    '_FCGI_SHUTDOWN_EVENT_' => '2184'
+    'SCRIPT_NAME' => '/index.php'
+    'REQUEST_URI' => '/index.php?r=admin/public/login'
+    'QUERY_STRING' => 'r=admin/public/login'
+    'REQUEST_METHOD' => 'POST'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REMOTE_PORT' => '53957'
+    'SCRIPT_FILENAME' => 'C:/phpStudy/PHPTutorial/WWW/yii2-adv-shop/backend/web/index.php'
+    'SERVER_ADMIN' => 'admin@php.cn'
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/phpStudy/PHPTutorial/WWW/yii2-adv-shop/backend/web'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'C:/phpStudy/PHPTutorial/WWW/yii2-adv-shop/backend/web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_NAME' => 'www.yiishopb.com'
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Win32) OpenSSL/1.0.2j mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\WINDOWS'
+    'HTTP_COOKIE' => '_csrf-backend=c27ccd5745cae1d3c6edb34f6f412d415f62bb3b8eac3a836beebea1fb577d4aa%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22wZOOpXLCyG3VqOkAXJwgeyAqVIBLqcHX%22%3B%7D; advanced-backend=2u0e9ovn3qnhqc8qo5pi57crp7'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.9'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://www.yiishopb.com/index.php?r=admin/public/login'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_ORIGIN' => 'http://www.yiishopb.com'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'CONTENT_LENGTH' => '206'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_HOST' => 'www.yiishopb.com'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1547617321.5796
+    'REQUEST_TIME' => 1547617321
+]

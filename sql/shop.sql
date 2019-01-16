@@ -3,7 +3,7 @@ CREATE TABLE IF NOT EXISTS `shop_admin` (
   `adminid` INT UNSIGNED NOT NULL AUTO_INCREMENT COMMENT '主键ID',
   `adminuser` VARCHAR(32) NOT NULL DEFAULT '' COMMENT '管理员账号',
   `adminpass` CHAR(32) NOT NULL DEFAULT '' COMMENT '管理员密码',
-  `adminemail` VARCHAR(50) NOT NULL DEFAULT '' COMMENT '滚啊梨园电子邮箱',
+  `adminemail` VARCHAR(50) NOT NULL DEFAULT '' COMMENT '管理员电子邮箱',
   `logintime` INT UNSIGNED NOT NULL DEFAULT '0' COMMENT '登录时间',
   `loginip` BIGINT NOT NULL DEFAULT '0' COMMENT '登录IP',
   `createtime` INT UNSIGNED NOT NULL DEFAULT '0' COMMENT '创建时间',
