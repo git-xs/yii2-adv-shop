@@ -10,6 +10,7 @@ namespace backend\modules\controllers;
 
 use backend\modules\models\Admin;
 use yii\web\Controller;
+use Yii;
 
 class PublicController extends Controller
 {
@@ -19,6 +20,10 @@ class PublicController extends Controller
 
         $model = new Admin;
 
+        if (Yii::$app->request->isPost) {
+            $post = Yii::$app->request->post();
+            $model->login($post);
+        }
         return $this->render("login",['model'=> $model]);
     }
 }
