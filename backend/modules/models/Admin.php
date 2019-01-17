@@ -22,6 +22,16 @@ class Admin extends ActiveRecord
         return "{{%admin}}";
     }
 
+    public function attributeLabels()
+    {
+        return [
+            'adminuser' => '管理员账号',
+            'adminemail' => '管理员邮箱',
+            'adminpass' => '管理员密码',
+            'repass' => '确认密码',
+        ];
+    }
+
     public function rules()
     {
         return [
@@ -115,6 +125,12 @@ class Admin extends ActiveRecord
             return (bool)$this->updateAll(['adminpass' => md5($this->adminpass)],'adminuser = :user',[':user' => $this->adminuser]);
         }
         return false;
+    }
+
+    //添加管理员
+    public function reg($data)
+    {
+
     }
 
 }
