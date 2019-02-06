@@ -35,15 +35,17 @@ class Admin extends ActiveRecord
     public function rules()
     {
         return [
-            ['adminuser','required','message'=>'管理员账号不能为空','on'=>['login','seekpass','changepass']],
-            ['adminpass','required','message'=>'管理员密码不能为空','on'=>['login','changepass']],
+            ['adminuser','required','message'=>'管理员账号不能为空','on'=>['login','seekpass','changepass','adminadd','changeemail']],
+            ['adminpass','required','message'=>'管理员密码不能为空','on'=>['login','changepass','adminadd','changeemail']],
             ['rememberMe','boolean','on'=>['login']],
-            ['adminpass','validatePass','on'=>['login']],
-            ['adminemail','required','message'=>'电子邮箱不能为空','on'=>['seekpass']],
-            ['adminemail','email','message'=>'电子有限格式不正确','on'=>['seekpass']],
-            ['adminemail','validateEmail','on'=>['seekpass']],
-            ['repass','required','message'=>'确认密码不能为空','on'=>['changepass']],
-            ['repass','compare','compareAttribute'=>'adminpass','message'=>'两次密码不一致','on'=>['changepass']],
+            ['adminpass','validatePass','on'=>['login','changeemail']],
+            ['adminemail','required','message'=>'电子邮箱不能为空','on'=>['seekpass','adminadd','changeemail']],
+            ['adminemail','email','message'=>'电子有限格式不正确','on'=>['seekpass','adminadd','changeemail']],
+            ['adminemail','unique','message'=>'电子邮箱被注册','on'=>['adminadd','changeemail']],
+            ['adminuser','unique','message'=>'管理员已被注册','on'=>['adminadd']],
+            ['adminemail','validateEmail','on'=>['seekpass',]],
+            ['repass','required','message'=>'确认密码不能为空','on'=>['changepass','adminadd']],
+            ['repass','compare','compareAttribute'=>'adminpass','message'=>'两次密码不一致','on'=>['changepass','adminadd']],
         ];
     }
 
@@ -130,7 +132,25 @@ class Admin extends ActiveRecord
     //添加管理员
     public function reg($data)
     {
+        $this->scenario = 'adminadd';
+        if ($this->load($data) && $this->validate()) {
+            $this->adminpass = md5($this->adminpass);
+            //save里面填写false 添加时就不会再次验证
+            if ($this->save(false)) {
+                return true;
+            }
+            return false;
+        }
+        return false;
+    }
 
+    //修改邮箱
+    public function changeEmail($data) {
+        $this->scenario = 'changeemail';
+        if ($this->load($data) && $this->validate()) {
+            return (bool)$this->updateAll(['adminemail'=>$this->adminemail],'adminuser = :user',[':user'=> $this->adminuser]);
+        }
+        return false;
     }
 
 }

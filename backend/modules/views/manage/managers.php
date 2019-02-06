@@ -108,7 +108,7 @@
                             <?=date("Y-m-d H:i:s",$manager->createtime);?>
                         </td>
                         <td>
-                            <a href="#">删除</a>
+                            <a href="<?php echo yii\helpers\Url::to(['manage/del','adminid'=>$manager->adminid])?>">删除</a>
                         </td>
                     </tr>
                     <!-- row -->
@@ -116,6 +116,14 @@
 
                     </tbody>
                 </table>
+
+                <?php
+                    if (Yii::$app->session->hasFlash("info")) {
+                        echo Yii::$app->session->getFlash("info");
+                    }
+
+                ?>
+
             </div>
             <div class="pagination pull-right">
                 <?=yii\widgets\LinkPager::widget(['pagination'=>$pager,'prevPageLabel'=>'&#8249','nextPageLabel'=>'&#8250']);?>

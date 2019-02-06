@@ -1,4 +1,4 @@
-<?php
+ <?php
 use yii\bootstrap\ActiveForm;
 use yii\helpers\Html;
 
@@ -12,7 +12,7 @@ use yii\helpers\Html;
     <div class="container-fluid">
         <div id="pad-wrapper" class="new-user">
             <div class="row-fluid header">
-                <h3>添加新管理员</h3>
+                <h3>管理员修改密码</h3>
             </div>
 
             <div class="row-fluid form-wrapper">
@@ -30,13 +30,12 @@ use yii\helpers\Html;
                                 ],
                             ]);
                         ?>
-                        <?=$form->field($model,'adminuser')->textInput(['class'=>'span9']);?>
-                        <?=$form->field($model,'adminemail')->textInput(['class'=>'span9']);?>
+                        <?=$form->field($model,'adminuser')->textInput(['class'=>'span9','disabled'=>true]);?>
                         <?=$form->field($model,'adminpass')->passwordInput(['class'=>'span9']);?>
                         <?=$form->field($model,'repass')->passwordInput(['class'=>'span9']);?>
 
                         <div class="span11 field-box actions">
-                            <?=Html::submitButton('创建',['class'=>'btn-glow primary']);?>
+                            <?=Html::submitButton('修改',['class'=>'btn-glow primary']);?>
                             <span>或者</span>
                             <?=Html::resetButton('取消',['class'=>'reset'])?>
                         </div>
@@ -53,7 +52,7 @@ use yii\helpers\Html;
                     </div>
                     <h6>重要提示：</h6>
                     <p>管理员可以管理后台功能模块</p>
-                    <p>请谨慎添加</p>
+                    <p>请谨慎修改</p>
                 </div>
             </div>
         </div>
