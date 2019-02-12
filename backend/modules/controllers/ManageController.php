@@ -37,7 +37,6 @@ class ManageController extends Controller
             Yii::$app->end();
         }
 
-
         if (Yii::$app->request->isPost) {
 
             $post = Yii::$app->request->post();

@@ -2,188 +2,111 @@
 namespace common\models;
 
 use Yii;
-use yii\base\NotSupportedException;
-use yii\behaviors\TimestampBehavior;
 use yii\db\ActiveRecord;
-use yii\web\IdentityInterface;
 
-/**
- * User model
- *
- * @property integer $id
- * @property string $username
- * @property string $password_hash
- * @property string $password_reset_token
- * @property string $email
- * @property string $auth_key
- * @property integer $status
- * @property integer $created_at
- * @property integer $updated_at
- * @property string $password write-only password
- */
-class User extends ActiveRecord implements IdentityInterface
+
+class User extends ActiveRecord
 {
-    const STATUS_DELETED = 0;
-    const STATUS_ACTIVE = 10;
-
-
-    /**
-     * {@inheritdoc}
-     */
+    public $repass;
+    public $loginname;
+    public $rememberMe = true;
     public static function tableName()
     {
-        return '{{%user}}';
+        return "{{%user}}";
     }
 
-    /**
-     * {@inheritdoc}
-     */
-    public function behaviors()
-    {
-        return [
-            TimestampBehavior::className(),
-        ];
-    }
-
-    /**
-     * {@inheritdoc}
-     */
     public function rules()
     {
         return [
-            ['status', 'default', 'value' => self::STATUS_ACTIVE],
-            ['status', 'in', 'range' => [self::STATUS_ACTIVE, self::STATUS_DELETED]],
+            ['loginname', 'required', 'message' => '登录用户名不能为空', 'on' => ['login']],
+            ['openid', 'required', 'message' => 'openid不能为空', 'on' => ['qqreg']],
+            ['username', 'required', 'message' => '用户名不能为空', 'on' => ['reg', 'regbymail', 'qqreg']],
+            ['openid', 'unique', 'message' => 'openid已经被注册', 'on' => ['qqreg']],
+            ['username', 'unique', 'message' => '用户已经被注册', 'on' => ['reg', 'regbymail', 'qqreg']],
+            ['useremail', 'required', 'message' => '电子邮件不能为空', 'on' => ['reg', 'regbymail']],
+            ['useremail', 'email', 'message' => '电子邮件格式不正确', 'on' => ['reg', 'regbymail']],
+            ['useremail', 'unique', 'message' => '电子邮件已被注册', 'on' => ['reg', 'regbymail']],
+            ['userpass', 'required', 'message' => '用户密码不能为空', 'on' => ['reg', 'login', 'regbymail', 'qqreg']],
+            ['repass', 'required', 'message' => '确认密码不能为空', 'on' => ['reg', 'qqreg']],
+            ['repass', 'compare', 'compareAttribute' => 'userpass', 'message' => '两次密码输入不一致', 'on' => ['reg', 'qqreg']],
+            ['userpass', 'validatePass', 'on' => ['login']],
         ];
     }
 
-    /**
-     * {@inheritdoc}
-     */
-    public static function findIdentity($id)
+    public function validatePass()
     {
-        return static::findOne(['id' => $id, 'status' => self::STATUS_ACTIVE]);
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public static function findIdentityByAccessToken($token, $type = null)
-    {
-        throw new NotSupportedException('"findIdentityByAccessToken" is not implemented.');
-    }
-
-    /**
-     * Finds user by username
-     *
-     * @param string $username
-     * @return static|null
-     */
-    public static function findByUsername($username)
-    {
-        return static::findOne(['username' => $username, 'status' => self::STATUS_ACTIVE]);
-    }
-
-    /**
-     * Finds user by password reset token
-     *
-     * @param string $token password reset token
-     * @return static|null
-     */
-    public static function findByPasswordResetToken($token)
-    {
-        if (!static::isPasswordResetTokenValid($token)) {
-            return null;
+        if (!$this->hasErrors()) {
+            $loginname = "username";
+            if (preg_match('/@/', $this->loginname)) {
+                $loginname = "useremail";
+            }
+            $data = self::find()->where($loginname.' = :loginname and userpass = :pass', [':loginname' => $this->loginname, ':pass' => md5($this->userpass)])->one();
+            if (is_null($data)) {
+                $this->addError("userpass", "用户名或者密码错误");
+            }
         }
-
-        return static::findOne([
-            'password_reset_token' => $token,
-            'status' => self::STATUS_ACTIVE,
-        ]);
     }
 
-    /**
-     * Finds out if password reset token is valid
-     *
-     * @param string $token password reset token
-     * @return bool
-     */
-    public static function isPasswordResetTokenValid($token)
+    public function attributeLabels()
     {
-        if (empty($token)) {
+        return [
+            'username' => '用户名',
+            'userpass' => '用户密码',
+            'repass' => '确认密码',
+            'useremail' => '电子邮箱',
+            'loginname' => '用户名/电子邮箱',
+        ];
+    }
+
+    public function reg($data, $scenario = 'reg')
+    {
+        $this->scenario = $scenario;
+        if ($this->load($data) && $this->validate()) {
+            $this->createtime = time();
+            $this->userpass = md5($this->userpass);
+            if ($this->save(false)) {
+                return true;
+            }
             return false;
         }
-
-        $timestamp = (int) substr($token, strrpos($token, '_') + 1);
-        $expire = Yii::$app->params['user.passwordResetTokenExpire'];
-        return $timestamp + $expire >= time();
+        return false;
     }
 
-    /**
-     * {@inheritdoc}
-     */
-    public function getId()
+    public function getProfile()
     {
-        return $this->getPrimaryKey();
+        return $this->hasOne(Profile::className(), ['userid' => 'userid']);
     }
 
-    /**
-     * {@inheritdoc}
-     */
-    public function getAuthKey()
+    public function login($data)
     {
-        return $this->auth_key;
+        $this->scenario = "login";
+        if ($this->load($data) && $this->validate()) {
+            //做点有意义的事
+            $lifetime = $this->rememberMe ? 24*3600 : 0;
+            $session = Yii::$app->session;
+            session_set_cookie_params($lifetime);
+            $session['loginname'] = $this->loginname;
+            $session['isLogin'] = 1;
+            return (bool)$session['isLogin'];
+        }
+        return false;
     }
 
-    /**
-     * {@inheritdoc}
-     */
-    public function validateAuthKey($authKey)
+    public function regByMail($data)
     {
-        return $this->getAuthKey() === $authKey;
+        $data['User']['username'] = 'imooc_'.uniqid();
+        $data['User']['userpass'] = uniqid();
+        $this->scenario = 'regbymail';
+        if ($this->load($data) && $this->validate()) {
+            $mailer = Yii::$app->mailer->compose('createuser', ['userpass' => $data['User']['userpass'], 'username' => $data['User']['username']]);
+            $mailer->setFrom('imooc_shop@163.com');
+            $mailer->setTo($data['User']['useremail']);
+            $mailer->setSubject('慕课商城-新建用户');
+            if ($mailer->send() && $this->reg($data, 'regbymail')) {
+                return true;
+            }
+        }
+        return false;
     }
 
-    /**
-     * Validates password
-     *
-     * @param string $password password to validate
-     * @return bool if password provided is valid for current user
-     */
-    public function validatePassword($password)
-    {
-        return Yii::$app->security->validatePassword($password, $this->password_hash);
-    }
-
-    /**
-     * Generates password hash from password and sets it to the model
-     *
-     * @param string $password
-     */
-    public function setPassword($password)
-    {
-        $this->password_hash = Yii::$app->security->generatePasswordHash($password);
-    }
-
-    /**
-     * Generates "remember me" authentication key
-     */
-    public function generateAuthKey()
-    {
-        $this->auth_key = Yii::$app->security->generateRandomString();
-    }
-
-    /**
-     * Generates new password reset token
-     */
-    public function generatePasswordResetToken()
-    {
-        $this->password_reset_token = Yii::$app->security->generateRandomString() . '_' . time();
-    }
-
-    /**
-     * Removes password reset token
-     */
-    public function removePasswordResetToken()
-    {
-        $this->password_reset_token = null;
-    }
 }

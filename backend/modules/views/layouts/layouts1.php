@@ -182,8 +182,8 @@
                 <i class="icon-chevron-down"></i>
             </a>
             <ul class="submenu">
-                <li><a href="user-list.html">用户列表</a></li>
-                <li><a href="new-user.html">加入新用户</a></li>
+                <li><a href="<?= yii\helpers\Url::to(['user/users'])?>">用户列表</a></li>
+                <li><a href="<?= yii\helpers\Url::to(['user/reg'])?>">加入新用户</a></li>
                 <li><a href="user-profile.html">用户信息</a></li>
             </ul>
         </li>
